@@ -1,5 +1,5 @@
 import { Text } from "react-native";
-import { Habits, HeaderBar, Screen } from "../components";
+import { Habits, HeaderBar, Screen, Tasks } from "../components";
 
 const HomeScreen = () => {
   return (
@@ -7,6 +7,7 @@ const HomeScreen = () => {
       <HeaderBar />
       {/* my task component */}
       <Habits />
+      <Tasks />
     </Screen>
   );
 };

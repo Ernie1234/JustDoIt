@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+
 import HabitCard from "./HabitCard";
 import { HabitData } from "../data/habits";
 import { HabitTypes } from "../types";
@@ -24,6 +25,8 @@ const Habits = () => {
         contentContainerStyle={{ columnGap: 16 }}
         horizontal
         keyExtractor={(item: HabitTypes) => item.id.toString()}
+        showsHorizontalScrollIndicator={false}
+        style={{ backgroundColor: "#fff" }}
       />
     </View>
   );

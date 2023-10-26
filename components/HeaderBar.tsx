@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
 
 //TODO COLORS
 //PURPLES:
-// ##6c00ff  @1
+// #6c00ff  @1
 // #862eff  @2
 // #9a4eff  @3
 
