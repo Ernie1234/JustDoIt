@@ -1,17 +1,17 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import { Text, View, StyleSheet, Dimensions } from "react-native";
 
-const TaskCard = () => {
+const Card = () => {
+  const SIZE = Dimensions.get("window").width;
   return (
-    <View style={styles.card}>
+    <View style={[styles.card, { width: SIZE * 0.7, height: SIZE * 0.4 }]}>
       <View style={styles.head}>
         <Text style={styles.title}>daily task</Text>
         <Text style={styles.currentTime}>currentTime</Text>
       </View>
       <Text style={styles.task}>Make a landing page app and mobile</Text>
       <View style={styles.expire}>
-        <Text style={styles.date}>TaskCard</Text>
-        <Text style={styles.dueTime}>TaskCard</Text>
+        <Text style={styles.date}>18/23</Text>
+        <Text style={styles.dueTime}>tick</Text>
       </View>
       <View style={styles.lgCircle} />
       <View style={styles.smCircle} />
@@ -19,14 +19,13 @@ const TaskCard = () => {
   );
 };
 
-export default TaskCard;
-
 const styles = StyleSheet.create({
   card: {
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "center",
     padding: 10,
+    borderRadius: 8,
     backgroundColor: "#862eff",
     shadowColor: "#171717",
     shadowOffset: { width: -2, height: 4 },
@@ -37,9 +36,10 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   head: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    alignItems: "center",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    // justifyContent: "flex-start",
+    // alignItems: "stretch",
   },
   title: {
     fontSize: 18,
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   },
   expire: {
     flexDirection: "row",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
     alignItems: "center",
   },
   date: {
@@ -89,6 +89,7 @@ const styles = StyleSheet.create({
     borderRadius: 75,
   },
 });
+export default Card;
 //PURPLES:
 // #6c00ff  @1
 // #862eff  @2
