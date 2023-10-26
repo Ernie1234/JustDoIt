@@ -1,5 +1,6 @@
-import { StyleSheet, View, Text, Pressable, FlatList } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { Text } from "react-native";
+import { HeaderBar, Screen } from "../components";
+import TaskCard from "../components/TaskCard";
 
 const DATA = [
   {
@@ -31,9 +32,12 @@ const DATA = [
 
 const HomeScreen = () => {
   return (
-    <View style={{ flex: 1, paddingTop: 10 }}>
-      <Text>home screen testing</Text>
-    </View>
+    <Screen>
+      <HeaderBar />
+      {/* my task component */}
+      <Text>My Tasks</Text>
+      <TaskCard />
+    </Screen>
   );
 };
 
