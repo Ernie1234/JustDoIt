@@ -19,6 +19,7 @@ const Habits = () => {
           <Text style={styles.seeMore}>See more</Text>
         </TouchableOpacity>
       </View>
+      {/* <View style={{ flex: 2 }}> */}
       <FlatList
         data={HabitData}
         renderItem={({ item }) => <HabitCard data={item} />}
@@ -28,6 +29,7 @@ const Habits = () => {
         showsHorizontalScrollIndicator={false}
         style={{ backgroundColor: "#fff" }}
       />
+      {/* </View> */}
     </View>
   );
 };

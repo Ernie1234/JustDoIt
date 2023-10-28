@@ -6,3 +6,8 @@ export type HabitTypes = {
   noLeft: number | string;
   period: string;
 };
+export type TodoTypes = {
+  id: number | string;
+  todo: string;
+  completed: boolean;
+};

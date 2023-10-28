@@ -2,7 +2,7 @@ export const HabitData = [
   {
     id: 1,
     completed: false,
-    habit: "Luke Skywalker",
+    habit: "Learn french",
     freq: "everyday",
     noLeft: "19/30",
     period: "30 min",
@@ -22,5 +22,13 @@ export const HabitData = [
     freq: "everyday",
     noLeft: "20/30",
     period: "3 hr",
+  },
+  {
+    id: 4,
+    completed: false,
+    habit: "Coding",
+    freq: "Every 3 days",
+    noLeft: "28/30",
+    period: "2 hr",
   },
 ];

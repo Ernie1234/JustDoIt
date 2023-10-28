@@ -5,6 +5,9 @@ import {
   View,
   Image,
   Dimensions,
+  Platform,
+  StatusBar,
+  SafeAreaView,
 } from "react-native";
 import { Entypo, AntDesign } from "@expo/vector-icons";
 
@@ -22,31 +25,35 @@ const HeaderBar = () => {
     timeOfDay = "evening";
   }
   return (
-    <View style={styles.container}>
-      <View style={styles.headerIcons}>
-        <Entypo name="menu" size={34} />
-        <TouchableOpacity onPress={() => {}}>
-          <AntDesign name="search1" size={24} color="black" />
-        </TouchableOpacity>
-      </View>
-      <View style={styles.headerProfile}>
-        <View style={[styles.headerImageWrapper, { borderRadius: SIZE * 0.5 }]}>
-          <Image
-            source={require("../assets/images/kemal.jpg")}
-            resizeMode="contain"
-            style={{
-              width: SIZE * 0.14,
-              height: SIZE * 0.14,
-              borderRadius: SIZE * 0.5,
-            }}
-          />
+    <SafeAreaView style={styles.container}>
+      <View style={{ paddingTop: 15 }}>
+        <View style={styles.headerIcons}>
+          <Entypo name="menu" size={34} />
+          <TouchableOpacity onPress={() => {}}>
+            <AntDesign name="search1" size={24} color="black" />
+          </TouchableOpacity>
         </View>
-        <View style={styles.headerUserWrapper}>
-          <Text style={styles.headerGreeting}>Good {timeOfDay},</Text>
-          <Text style={styles.headerUsername}>Anumah Joshua</Text>
+        <View style={styles.headerProfile}>
+          <View
+            style={[styles.headerImageWrapper, { borderRadius: SIZE * 0.5 }]}
+          >
+            <Image
+              source={require("../assets/images/kemal.jpg")}
+              resizeMode="contain"
+              style={{
+                width: SIZE * 0.14,
+                height: SIZE * 0.14,
+                borderRadius: SIZE * 0.5,
+              }}
+            />
+          </View>
+          <View style={styles.headerUserWrapper}>
+            <Text style={styles.headerGreeting}>Good {timeOfDay},</Text>
+            <Text style={styles.headerUsername}>Anumah Joshua</Text>
+          </View>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -54,7 +61,7 @@ export default HeaderBar;
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 15,
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   headerIcons: {
     flexDirection: "row",
@@ -96,6 +103,8 @@ const styles = StyleSheet.create({
 // #6c00ff  @1
 // #862eff  @2
 // #9a4eff  @3
+// #b781ff  @4
+// #d1b0ff  @5
 
 //REDS:
 //#D90000   @1

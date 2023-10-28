@@ -1,5 +1,4 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import React from "react";
 
 const Tasks = () => {
   return (
@@ -7,7 +6,7 @@ const Tasks = () => {
       <View style={styles.header}>
         <Text style={styles.title}>Today Tasks</Text>
         <TouchableOpacity onPress={() => {}}>
-          <Text style={styles.seeMore}>See All</Text>
+          <Text style={styles.seeMore}>All tasks</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -35,5 +34,7 @@ const styles = StyleSheet.create({
   seeMore: {
     fontSize: 18,
     color: "#6c00ff",
+    fontWeight: "bold",
+    textTransform: "capitalize",
   },
 });

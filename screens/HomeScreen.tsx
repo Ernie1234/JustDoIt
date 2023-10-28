@@ -1,14 +1,14 @@
-import { Text } from "react-native";
 import { Habits, HeaderBar, Screen, Tasks } from "../components";
+import List from "../components/List";
 
 const HomeScreen = () => {
   return (
-    <Screen>
+    <>
       <HeaderBar />
-      {/* my task component */}
       <Habits />
       <Tasks />
-    </Screen>
+      <List />
+    </>
   );
 };
 
