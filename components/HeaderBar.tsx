@@ -97,18 +97,3 @@ const styles = StyleSheet.create({
     color: "#666",
   },
 });
-
-//TODO COLORS
-//PURPLES:
-// #6c00ff  @1
-// #862eff  @2
-// #9a4eff  @3
-// #b781ff  @4
-// #d1b0ff  @5
-
-//REDS:
-//#D90000   @1
-
-//GREENS:
-//#04733F   @1
-//#04756F   @2
