@@ -8,6 +8,7 @@ const COLORS = {
   purple4: "#b781ff",
   purple5: "#d1b0ff",
 
+  grayDark: "#515157",
   gray: "#83829A",
   gray2: "#C1C0C8",
 

@@ -5,7 +5,7 @@ import ScreenNavigation from "./navigations";
 export default function App() {
   return (
     <>
-      <StatusBar style="light" backgroundColor="#862eff" />
+      <StatusBar style="dark" />
       <ScreenNavigation />
     </>
   );
